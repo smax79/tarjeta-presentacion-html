@@ -1,28 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> 
+<!-- Le indica al navegador que este documento usa HTML5 -->
+
+<html lang="es">
+<!-- Elemento raíz del documento. El atributo lang="es" indica que el idioma es español -->
 
 <head>
+    <!-- Contiene información técnica del sitio (no visible directamente en la página) -->
+
     <meta charset="UTF-8">
+    <!-- Permite usar caracteres especiales como tildes y la ñ correctamente -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoja de presentación</title>
+    <!-- Hace que la página sea adaptable a celulares y tablets (responsive design) -->
+
+    <title>Santiago Martínez Chavarro | Tech & Comunicación Creativa</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
+    <!-- Fuente externa desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Librería de iconos (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Hoja de estilos propia -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Aquí se conecta el archivo CSS donde está el diseño visual -->
 </head>
 
 <body>
-    <header>
-        <h1 style="text-align: center;">Hoja de presentación</h1>
-        <br>
-        <img src="perfil.jpg" alt="Foto de perfil" width="200" height="200" style="display: block; margin-left: auto; margin-right: auto;">
-        <p style="text-align: center;"><strong>Santiago Martínez Chavarro</strong></p>
-        <p style="text-align: center;">28 años</p>
-        <p style="text-align: center;">Profesión: Aprendíz de Ingeniería Multimedia</p>
-        <p style="text-align: center;">Vocación: Auxiliar de IT</p>
-        <p style="text-align: center;">Intereses: Desarrollo web, diseño multimedia, liderazgo creativo</p>
+<!-- Todo lo que está dentro de body es visible en la página -->
+
+    <!-- ==================== MENÚ DE NAVEGACIÓN ==================== -->
+    <nav class="navbar">
+        <!-- nav representa la barra de navegación principal -->
+
+        <div class="nav-container">
+            <!-- Contenedor que agrupa el contenido del menú -->
+
+            <a href="#" class="logo">SANTIAGO <span>MARTÍNEZ</span></a>
+            <!-- Logo o nombre principal del sitio -->
+
+            <ul class="nav-links">
+                <!-- Lista desordenada que contiene los enlaces del menú -->
+
+                <li><a href="#sobre-mi">Perfil</a></li>
+                <!-- Enlace interno que lleva a la sección con id="sobre-mi" -->
+
+                <li class="dropdown">
+                    <!-- Elemento con submenú desplegable -->
+
+                    <a href="#proyectos" class="dropbtn">
+                        Portafolio <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <!-- Contenido oculto que aparece al desplegar -->
+                    <div class="dropdown-content">
+                        <a href="#copy">Copywriting</a>
+                        <a href="#fotografia">Fotografía</a>
+                        <a href="#audiovisual">Audiovisual</a>
+                    </div>
+                </li>
+
+                <li><a href="#estudios">Formación</a></li>
+                <li><a href="#contacto" class="nav-btn">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ==================== SECCIÓN PRINCIPAL (HERO) ==================== -->
+    <header class="hero">
+        <!-- header representa la sección de presentación -->
+
+        <div class="hero-content">
+            <div class="profile-frame">
+                <!-- Marco decorativo de la imagen -->
+                <img src="perfil.jpg" alt="Santiago Martínez Ch">
+                <!-- Imagen de perfil. El atributo alt es importante para accesibilidad -->
+            </div>
+
+            <h1>Santiago Martínez Chavarro</h1>
+            <!-- Título principal del sitio -->
+
+            <p class="tagline">Estudiante de Ingeniería Multimedia</p>
+            <!-- Frase descriptiva corta -->
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>Introducción</h2>
-            <p style="text-align:justify">Productor audiovisual interdisciplinario con más de diez años de experiencia en fotografía,
+    <!-- Contenido principal del sitio -->
+    <main class="container">
+
+        <!-- ==================== PERFIL ==================== -->
+        <section id="sobre-mi" class="card">
+            <!-- section agrupa contenido temático -->
+            <!-- id permite enlazar desde el menú -->
+
+            <div class="section-title">
+                <h2><i class="fas fa-user-circle"></i> Perfil Profesional</h2>
+            </div>
+
+            <p>
+                Soy Santiago Martínez, Productor audiovisual interdisciplinario con más de diez años de experiencia en fotografía,
                 video, sonido y
                 narrativa visual. Perfil híbrido creativo/técnico formado en dirección creativa y en proceso de
                 consolidación
@@ -30,104 +107,114 @@
                 que
                 conecta lo artístico, lo comercial y lo tecnológico, generando valor para equipos y organizaciones en
                 entornos
-                dinámicos.</p>
+                dinámicos.
+            </p>
         </section>
 
-        <section>
-            <h2>Experiencia laboral</h2>
-            <article>
-                <p style="text-align:justify"><strong>Productor audiovisual independiente</strong> (2010 - presente)</p>
-                <ul>
-                    <li>Producción de contenido multimedia para clientes en diversos sectores, incluyendo publicidad,
-                        entretenimiento y educación.</li>
-                    <br>
-                    <li>Gestión de proyectos desde la concepción hasta la entrega final, asegurando la calidad y el
-                        cumplimiento
-                        de los plazos.</li>
-                    <br>
-                    <li>Colaboración con equipos creativos y técnicos para desarrollar soluciones innovadoras y efectivas.
-                    </li>
-                </ul>
-            </article>
-            <article>
-                <p style="text-align:justify"><strong>Auxiliar de IT</strong> (2025 - presente)</p>
-                <ul>
-                    <li>Servicio técnico de hardware y software en entornos empresariales.</li>
-                    <br>
-                    <li>Resolución de problemas técnicos de manera eficiente y efectiva.</li>
-                    <br>
-                    <li>Aprendíz del area de soporte técnico y mantenimiento de equipos informáticos.</li>
-                </ul>
-            </article>
-        </section>
+        <!-- ==================== FORMACIÓN ==================== -->
+        <section id="estudios" class="card">
+            <div class="section-title">
+                <h2><i class="fas fa-graduation-cap"></i> Formación Académica</h2>
+            </div>
 
-        <section>
-            <h2>Educación</h2>
-            <article>
-                <p style="text-align:justify"><strong>Instituto I3</strong> - Aprendíz de Ingeniería Multimedia (2025 - presente)</p>
-                <ul>
-                    <li>Formación en desarrollo web, diseño gráfico, inteligencia artificial y otras áreas relacionadas con
-                        la
-                        ingeniería multimedia.</li>
-                    <br>
-                    <li>Participación en prácticas profesionales en entornos de trabajo real.</li>
-                </ul>
-            </article>
-            <article>
-                <p style="text-align:justify"><strong>LABASAD</strong> - Dirección Creativa en Comunicación (2021 - 2022)</p>
-                <ul>
-                    <li>Formación en las diferentes areas de la comunicación creativa y digital. Enfoque en Copywriting,
-                        branding y storytelling para empresas</li>
-                    <br>
-                    <li>Participación en proyectos prácticos y colaborativos para aplicar los conocimientos adquiridos.</li>
-                </ul>
-            </article>
-        </section>
-
-        <section>
-            <h2>Proyectos destacados</h2>
-            <article>
-                <p style="text-align:justify"><strong>Proyecto de video interactivo</strong> (2026)</p>
-                <ul>
-                    <li>Desarrollo y producción de video interactivo para campaña publicitaria, utilizando técnicas de
-                        narrativa
-                        visual y edición avanzada.</li>
-                    <br>
-                    <li>Colaboración con un equipo de creativos y técnicos para crear una experiencia única para los
-                        espectadores.</li>
-                </ul>
-            </article>
-            <article>
-                <p style="text-align:justify"><strong>Proyecto de diseño web</strong> (2026)</p>
-                <ul>
-                    <li>Desarrollo de un sitio web interactivo para una empresa de servicios digitales, utilizando
-                        tecnologías
-                        modernas de desarrollo web.</li>
-                    <br>
-                    <li>Implementación de funcionalidades dinámicas y una interfaz intuitiva para mejorar la experiencia del
-                        usuario.</li>
-                </ul>
-            </article>
-        </section>
-
-        <section>
-            <h2>Habilidades</h2>
-            <ul>
-                <li>Desarrollo web: HTML, CSS, JavaScript, Python</li>
-                <li>Diseño gráfico: Adobe Photoshop, Illustrator, Canva, Affinity</li>
-                <li>Edición de video: Adobe Premiere Pro, After Effects, Final Cut Pro, DaVinci Resolve</li>
-                <li>Inteligencia artificial: ChatGPT, herramientas de IA para diseño y desarrollo</li>
-                <li>Gestión de proyectos: Agile, Scrum</li>
+            <ul class="info-list">
+                <!-- Lista de estudios -->
+                <li><strong>Aprendíz de IT</strong> - Instituto Técnico I3</li>
+                <li><strong>Bachiller Académico</strong> - I.E.D. Francisco de Paula Santander</li>
             </ul>
         </section>
+
+        <!-- ==================== PROYECTOS ==================== -->
+        <section id="proyectos" class="card">
+
+            <div class="section-title">
+                <h2><i class="fas fa-briefcase"></i> Áreas de Especialidad</h2>
+            </div>
+
+            <!-- Subcategoría Copywriting -->
+            <div id="copy" class="portfolio-sub">
+                <h3><i class="fas fa-pen-nib"></i> Comunicación Creativa</h3>
+
+                <div class="grid-3">
+                    <!-- grid-3 organiza en 3 columnas usando CSS -->
+                    <div class="mini-card"><strong>Proyecto:</strong> Redacción editorial.</div>
+                    <div class="mini-card"><strong>Proyecto:</strong> Storytelling.</div>
+                </div>
+            </div>
+
+            <!-- Subcategoría Fotografía -->
+            <div id="fotografia" class="portfolio-sub">
+                <h3><i class="fas fa-camera"></i> Fotografía</h3>
+
+                <div class="grid-3">
+                    <div class="mini-card"><strong>Producto:</strong> Catálogo.</div>
+                    <div class="mini-card"><strong>Retrato:</strong> Manejo de luz.</div>
+                    <div class="mini-card"><strong>Urbana:</strong> Fotoperiodismo.</div>
+                </div>
+            </div>
+
+            <!-- Subcategoría Audiovisual -->
+            <div id="audiovisual" class="portfolio-sub">
+                <h3><i class="fas fa-video"></i> Realización Audiovisual</h3>
+
+                <div class="av-roles">
+                    <!-- role-box representa cada rol -->
+                    <div class="role-box"><i class="fas fa-clapperboard"></i><strong>Dirección</strong></div>
+                    <div class="role-box"><i class="fas fa-tasks"></i><strong>Producción</strong></div>
+                    <div class="role-box"><i class="fas fa-scissors"></i><strong>Edición/VFX</strong></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CONTACTO ==================== -->
+        <section id="contacto" class="card">
+
+            <div class="section-title">
+                <h2><i class="fas fa-paper-plane"></i> Propuesta de Colaboración</h2>
+            </div>
+
+            <!-- Formulario de contacto -->
+            <form class="main-form">
+
+                <div class="grid-2">
+                    <!-- grid-2 organiza en 2 columnas -->
+                    <input type="text" placeholder="Tu Nombre" required>
+                    <!-- required obliga al usuario a llenar el campo -->
+
+                    <input type="email" placeholder="Correo Electrónico" required>
+                    <!-- type="email" valida que tenga formato de correo -->
+                </div>
+
+                <textarea rows="4" placeholder="Háblame de tu proyecto..."></textarea>
+                <!-- Campo para escribir mensaje largo -->
+
+                <button type="submit" class="btn-main">
+                    Enviar Mensaje
+                </button>
+                <!-- Botón que envía el formulario -->
+            </form>
+        </section>
+
     </main>
 
+    <!-- ==================== PIE DE PÁGINA ==================== -->
     <footer>
-        <br>
-        <h2 style="text-align: center;">Contacto</h2>
-        <p style="text-align: center;">Correo electrónico: santiago.martinez.nimu@institutoi3.edu.co</p>
-        <p style="text-align: center;">Teléfono: +57 319 553 9813</p>
-    </footer>
-</body>
+        <!-- footer contiene información final del sitio -->
 
+        <div class="social-links">
+            <!-- Enlaces a redes sociales -->
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <div class="footer-info">
+            <p><strong>Santiago Martínez Chavarro</strong> | Aprendíz de Ingeniería Multimedia</p>
+            <p>Email: santiago.martinez.nimu@institutoi3.edu.co | Celular: +57 3195539813</p>
+            <p class="copy">&copy; 2026 Ecosistema Digital Profesional.</p>
+            <!-- &copy; genera el símbolo © -->
+        </div>
+    </footer>
+
+</body>
 </html>

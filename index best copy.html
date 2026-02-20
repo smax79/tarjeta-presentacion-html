@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santiago Martínez Chavarro | Tech & Comunicación Creativa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">SANTIAGO <span>MARTÍNEZ</span></a>
+            <ul class="nav-links">
+                <li><a href="#sobre-mi">Perfil</a></li>
+                <li class="dropdown">
+                    <a href="#proyectos" class="dropbtn">Portafolio <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#copy">Copywriting</a>
+                        <a href="#fotografia">Fotografía</a>
+                        <a href="#audiovisual">Audiovisual</a>
+                    </div>
+                </li>
+                <li><a href="#estudios">Formación</a></li>
+                <li><a href="#contacto" class="nav-btn">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="profile-frame">
+                <img src="perfil.jpg" alt="Santiago Martínez Ch">
+            </div>
+            <h1>Santiago Martínez Chavarro</h1>
+            <p class="tagline">Estudiante de Ingeniería Multimedia</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section id="sobre-mi" class="card">
+            <div class="section-title">
+                <h2><i class="fas fa-user-circle"></i> Perfil Profesional</h2>
+            </div>
+            <p>Soy Santiago Martínez, estudiante de Ingeniería Multimedia. Me apasiona la creación de contenido, la narrativa visual y el impacto que la comunicación tiene en la sociedad actual. Mi objetivo es desarrollar habilidades que me permitan conectar ideas con audiencias de manera efectiva y creativa.</p>
+        </section>
+
+        <section id="estudios" class="card">
+            <div class="section-title">
+                <h2><i class="fas fa-graduation-cap"></i> Formación Académica</h2>
+            </div>
+            <ul class="info-list">
+                <li><strong>Ingeniería Multimedia</strong> - [Tu Universidad aquí]</li>
+                <li><strong>Bachiller Académico</strong> - [Tu Colegio aquí]</li>
+            </ul>
+        </section>
+
+        <section id="proyectos" class="card">
+            <div class="section-title">
+                <h2><i class="fas fa-briefcase"></i> Áreas de Especialidad</h2>
+            </div>
+
+            <div id="copy" class="portfolio-sub">
+                <h3><i class="fas fa-pen-nib"></i> Copywriting</h3>
+                <div class="grid-3">
+                    <div class="mini-card"><strong>Proyecto:</strong> Redacción editorial y persuasiva.</div>
+                    <div class="mini-card"><strong>Proyecto:</strong> Estrategias de Storytelling.</div>
+                </div>
+            </div>
+
+            <div id="fotografia" class="portfolio-sub">
+                <h3><i class="fas fa-camera"></i> Fotografía Creativa</h3>
+                <div class="grid-3">
+                    <div class="mini-card"><strong>Producto:</strong> Catálogos y estética comercial.</div>
+                    <div class="mini-card"><strong>Retrato:</strong> Manejo de luz y dirección de arte.</div>
+                    <div class="mini-card"><strong>Urbana:</strong> Captura de entorno y fotoperiodismo.</div>
+                </div>
+            </div>
+
+            <div id="audiovisual" class="portfolio-sub">
+                <h3><i class="fas fa-video"></i> Producción Audiovisual</h3>
+                <div class="av-roles">
+                    <div class="role-box"><i class="fas fa-clapperboard"></i><strong>Dirección</strong></div>
+                    <div class="role-box"><i class="fas fa-tasks"></i><strong>Producción</strong></div>
+                    <div class="role-box"><i class="fas fa-scissors"></i><strong>Edición/VFX</strong></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid-2">
+            <section class="card">
+                <div class="section-title"><h3><i class="fas fa-award"></i> Certificados</h3></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+            </section>
+            <section class="card">
+                <div class="section-title"><h3><i class="fas fa-hands-helping"></i> Voluntariado</h3></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+            </section>
+        </div>
+
+        <section id="experiencia" class="card">
+            <div class="section-title"><h2><i class="fas fa-history"></i> Experiencia Adicional</h2></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </section>
+
+        <section id="contacto" class="card">
+            <div class="section-title"><h2><i class="fas fa-paper-plane"></i> Propuesta de Colaboración</h2></div>
+            <p class="cta-text">Ve quién soy, y lo que puedo hacer, contáctame.</p>
+            <form class="main-form">
+                <div class="grid-2">
+                    <input type="text" placeholder="Tu Nombre" required>
+                    <input type="email" placeholder="Correo Electrónico" required>
+                </div>
+                <textarea rows="4" placeholder="Háblame de tu proyecto..."></textarea>
+                <button type="submit" class="btn-main">Enviar Mensaje</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" title="Behance"><i class="fab fa-behance"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="Flickr"><i class="fab fa-flickr"></i></a>
+            <a href="#" title="Vimeo"><i class="fab fa-vimeo-v"></i></a>
+            <a href="#" title="Enlace Externo"><i class="fas fa-link"></i></a>
+        </div>
+        <div class="footer-info">
+            <p><strong>Santiago Martínez</strong> | Aprendíz de Ingeniería Multimedia</p>
+            <p>Email: hola@tusitio.com | Celular: +XX XXX XXX XXXX</p>
+            <p class="copy">&copy; 2026 Ecosistema Digital Profesional.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

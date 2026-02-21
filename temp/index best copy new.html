@@ -13,9 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Hace que la página sea adaptable a celulares y tablets (responsive design) -->
 
-    <meta name="description" content="Portafolio profesional de Santiago Martínez, productor audiovisual e ingeniero multimedia enfocado en experiencias digitales, storytelling y tecnología.">
-    <!-- Mejora SEO: descripción que aparecerá en Google -->
-
     <title>Santiago Martínez Chavarro | Tech & Comunicación Creativa</title>
     <!-- Título que aparece en la pestaña del navegador -->
 
@@ -74,30 +71,18 @@
     <header class="hero">
         <!-- header representa la sección de presentación -->
 
-        <!-- Wrapper adicional para control de layout avanzado (animaciones futuras / centrado perfecto) -->
-        <div class="hero-wrapper">
-
-            <div class="hero-content">
-                <div class="profile-frame">
-                    <!-- Marco decorativo de la imagen -->
-                    <img src="perfil.jpg" alt="Fotografía de Santiago Martínez Ch">
-                    <!-- Mejora accesibilidad: descripción más clara -->
-                </div>
-
-                <h1>Santiago Martínez Chavarro</h1>
-                <!-- Título principal del sitio -->
-
-                <p class="tagline">Estudiante de Ingeniería Multimedia</p>
-                <!-- Frase descriptiva corta -->
-                <br><br>
-                <!-- CTA preparado para estilo glass + hover avanzado -->
-                <div class="hero-cta">
-                    <a href="#proyectos" class="btn-main hero-btn">
-                        Explorar mi universo digital
-                    </a>
-                </div>
-
+        <div class="hero-content">
+            <div class="profile-frame">
+                <!-- Marco decorativo de la imagen -->
+                <img src="perfil.jpg" alt="Santiago Martínez Ch">
+                <!-- Imagen de perfil. El atributo alt es importante para accesibilidad -->
             </div>
+
+            <h1>Santiago Martínez Chavarro</h1>
+            <!-- Título principal del sitio -->
+
+            <p class="tagline">Estudiante de Ingeniería Multimedia</p>
+            <!-- Frase descriptiva corta -->
         </div>
     </header>
 
@@ -113,20 +98,17 @@
                 <h2><i class="fas fa-user-circle"></i> Perfil Profesional</h2>
             </div>
 
-            <!-- Wrapper semántico para mejorar lectura estructural -->
-            <div class="text-content">
-                <p>
-                    Soy Santiago Martínez, Productor audiovisual interdisciplinario con más de diez años de experiencia en fotografía,
-                    video, sonido y
-                    narrativa visual. Perfil híbrido creativo/técnico formado en dirección creativa y en proceso de
-                    consolidación
-                    como Ingeniero Multimedia. Como bogotano con experiencia internacional, aporto una mirada cultural sólida
-                    que
-                    conecta lo artístico, lo comercial y lo tecnológico, generando valor para equipos y organizaciones en
-                    entornos
-                    dinámicos.
-                </p>
-            </div>
+            <p>
+                Soy Santiago Martínez, Productor audiovisual interdisciplinario con más de diez años de experiencia en fotografía,
+                video, sonido y
+                narrativa visual. Perfil híbrido creativo/técnico formado en dirección creativa y en proceso de
+                consolidación
+                como Ingeniero Multimedia. Como bogotano con experiencia internacional, aporto una mirada cultural sólida
+                que
+                conecta lo artístico, lo comercial y lo tecnológico, generando valor para equipos y organizaciones en
+                entornos
+                dinámicos.
+            </p>
         </section>
 
         <!-- ==================== FORMACIÓN ==================== -->
@@ -148,7 +130,6 @@
             <div class="section-title">
                 <h2><i class="fas fa-briefcase"></i> Áreas de Especialidad</h2>
             </div>
-            <br>
 
             <!-- Subcategoría Copywriting -->
             <div id="copy" class="portfolio-sub">
@@ -156,80 +137,31 @@
 
                 <div class="grid-3">
                     <!-- grid-3 organiza en 3 columnas usando CSS -->
-
-                    <!-- Card clickable completa -->
-                    <a href="#" class="mini-card interactive-card">
-                        <div class="card-content">
-                            <strong>Proyecto:</strong> Redacción editorial.
-                            <span class="card-hover-info">Contenido estratégico para marcas y medios.</span>
-                        </div>
-                    </a>
-
-                    <a href="#" class="mini-card interactive-card">
-                        <div class="card-content">
-                            <strong>Proyecto:</strong> Storytelling.
-                            <span class="card-hover-info">Narrativas enfocadas en conexión emocional.</span>
-                        </div>
-                    </a>
-
+                    <div class="mini-card"><strong>Proyecto:</strong> Redacción editorial.</div>
+                    <div class="mini-card"><strong>Proyecto:</strong> Storytelling.</div>
                 </div>
             </div>
-            <br>
+
             <!-- Subcategoría Fotografía -->
             <div id="fotografia" class="portfolio-sub">
                 <h3><i class="fas fa-camera"></i> Fotografía</h3>
 
                 <div class="grid-3">
-
-                    <a href="#" class="mini-card interactive-card">
-                        <div class="card-content">
-                            <strong>Producto:</strong> Catálogo.
-                            <span class="card-hover-info">Fotografía comercial orientada a conversión.</span>
-                        </div>
-                    </a>
-
-                    <a href="#" class="mini-card interactive-card">
-                        <div class="card-content">
-                            <strong>Retrato:</strong> Manejo de luz.
-                            <span class="card-hover-info">Control de iluminación para identidad visual.</span>
-                        </div>
-                    </a>
-
-                    <a href="#" class="mini-card interactive-card">
-                        <div class="card-content">
-                            <strong>Urbana:</strong> Fotoperiodismo.
-                            <span class="card-hover-info">Narrativa documental en entornos reales.</span>
-                        </div>
-                    </a>
-
+                    <div class="mini-card"><strong>Producto:</strong> Catálogo.</div>
+                    <div class="mini-card"><strong>Retrato:</strong> Manejo de luz.</div>
+                    <div class="mini-card"><strong>Urbana:</strong> Fotoperiodismo.</div>
                 </div>
             </div>
-            <br>
+
             <!-- Subcategoría Audiovisual -->
             <div id="audiovisual" class="portfolio-sub">
                 <h3><i class="fas fa-video"></i> Realización Audiovisual</h3>
 
                 <div class="av-roles">
                     <!-- role-box representa cada rol -->
-
-                    <a href="#" class="role-box interactive-card">
-                        <i class="fas fa-clapperboard"></i>
-                        <strong>Dirección</strong>
-                        <span class="card-hover-info">Visión creativa y narrativa del proyecto.</span>
-                    </a>
-
-                    <a href="#" class="role-box interactive-card">
-                        <i class="fas fa-tasks"></i>
-                        <strong>Producción</strong>
-                        <span class="card-hover-info">Gestión integral de recursos y ejecución.</span>
-                    </a>
-
-                    <a href="#" class="role-box interactive-card">
-                        <i class="fas fa-scissors"></i>
-                        <strong>Edición/VFX</strong>
-                        <span class="card-hover-info">Postproducción y construcción visual final.</span>
-                    </a>
-
+                    <div class="role-box"><i class="fas fa-clapperboard"></i><strong>Dirección</strong></div>
+                    <div class="role-box"><i class="fas fa-tasks"></i><strong>Producción</strong></div>
+                    <div class="role-box"><i class="fas fa-scissors"></i><strong>Edición/VFX</strong></div>
                 </div>
             </div>
         </section>
@@ -240,13 +172,6 @@
             <div class="section-title">
                 <h2><i class="fas fa-paper-plane"></i> Propuesta de Colaboración</h2>
             </div>
-            <br>
-
-            <!-- Texto guía para UX -->
-            <p class="cta-text">
-                Si tienes un proyecto en mente, construyámoslo juntos.
-            </p>
-            <br>
 
             <!-- Formulario de contacto -->
             <form class="main-form">

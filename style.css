@@ -13,11 +13,12 @@ HOJA DE ESTILO PROFESIONAL - SANTIAGO MARTÍNEZ
     --footer-bg: #1b263b;
     --footer-light: #e2e8f0;
 
+    /* SOMBRAS PREMIUM */
     --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.04);
     --shadow-medium: 0 20px 60px rgba(0, 0, 0, 0.08);
     --shadow-glass: 0 8px 25px rgba(0, 0, 0, 0.06);
 
-    --transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    --transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1); /* transición más rápida para mobile */
 }
 
 /* 1. RESET */
@@ -32,26 +33,14 @@ body {
     background-color: var(--bg-body);
     color: var(--text-main);
     line-height: 1.7;
-}
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: url("https://www.transparenttextures.com/patterns/noise.png");
-    opacity: 0.025;
-    pointer-events: none;
-    z-index: 0;
+    /* Mejora renderizado tipográfico */
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 p {
     text-align: justify;
-}
-
-/* 🔥 CORRECCIÓN: TÍTULOS DE ÁREAS CENTRADOS */
-.section-title,
-.card h3 {
-    text-align: center;
 }
 
 /* 2. NAVBAR */
@@ -82,6 +71,7 @@ p {
     text-decoration: none;
 }
 
+/* NAV LINKS */
 .nav-links {
     display: flex;
     list-style: none;
@@ -101,11 +91,13 @@ p {
     transition: var(--transition);
 }
 
+/* MICROINTERACCIÓN */
 .nav-links a:hover {
     color: var(--accent);
     transform: translateY(-2px);
 }
 
+/* DROPDOWN */
 .dropdown-content {
     position: absolute;
     top: 140%;
@@ -113,13 +105,23 @@ p {
     background: white;
     border-radius: 12px;
     box-shadow: var(--shadow-medium);
+    
     opacity: 0;
     transform: translateY(10px);
     pointer-events: none;
-    transition: var(--transition);
+
+    transition: all 0.2s ease; /* respuesta más inmediata */
 }
 
+/* Hover normal (desktop) */
 .dropdown:hover .dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Mobile: activar también con focus (tap) */
+.dropdown:focus-within .dropdown-content {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
@@ -213,6 +215,11 @@ p {
     transform: translateY(-4px);
 }
 
+.section-title {
+    margin-bottom: 2rem;
+    text-align: center; /* títulos centrados */
+}
+
 /* 5. GRID */
 .grid-3 {
     display: grid;
@@ -226,19 +233,13 @@ p {
     gap: 1.5rem;
 }
 
+/* MINI CARDS */
 .mini-card {
     background: #f8fafc;
-    padding: 1.2rem;
+    padding: 1.5rem;
     border-radius: 14px;
     border: 1px solid #e2e8f0;
     transition: var(--transition);
-    text-decoration: none;
-    color: inherit;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
 }
 
 .mini-card:hover {
@@ -246,32 +247,7 @@ p {
     box-shadow: var(--shadow-soft);
 }
 
-.card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition);
-}
-
-.interactive-card:hover .card-content {
-    transform: translateY(-6px);
-}
-
-.card-hover-info {
-    display: block;
-    font-size: 0.8rem;
-    margin-top: 0.6rem;
-    opacity: 0;
-    transform: translateY(6px);
-    transition: var(--transition);
-}
-
-.interactive-card:hover .card-hover-info {
-    opacity: 1;
-    transform: translateY(0);
-}
-
+/* AREAS DE ESPECIALIDAD */
 .av-roles {
     display: flex;
     justify-content: center;
@@ -280,35 +256,55 @@ p {
     margin-top: 2rem;
 }
 
+/* BOTONES */
 .role-box {
     width: 180px;
-    padding: 1.6rem 1rem;
+    padding: 1.8rem 1.2rem;
     border-radius: 16px;
     background: var(--primary);
     color: white;
     text-align: center;
-    transition: var(--transition);
-    text-decoration: none;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
 
-.role-box:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-medium);
+    text-decoration: none;
+
+    transition: var(--transition);
 }
 
 .role-box i {
     font-size: 2rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem; /* separación icono-texto */
     color: var(--accent);
 }
 
 .role-box strong {
     display: block;
+}
+
+/* DESCRIPCIÓN OCULTA */
+.card-hover-info {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    transition: all 0.25s ease;
+}
+
+/* HOVER Y TAP */
+.role-box:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-medium);
+}
+
+.role-box:hover .card-hover-info,
+.role-box:active .card-hover-info {
+    opacity: 1;
+    max-height: 60px;
 }
 
 /* FORM */
@@ -318,19 +314,11 @@ p {
 }
 
 input,
-textarea,
-.btn-main {
+textarea {
     padding: 1rem;
     border-radius: 12px;
     border: 1px solid #cbd5e1;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
-input:focus,
-textarea:focus {
-    outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 2px rgba(0,180,216,0.15);
+    width: 100%;
 }
 
 .btn-main {
@@ -339,9 +327,10 @@ textarea:focus {
     border: none;
     padding: 1.1rem;
     border-radius: 12px;
+    cursor: pointer;
 }
 
-/* FOOTER */
+/* 7. FOOTER */
 footer {
     background: var(--footer-bg);
     color: var(--footer-light);
@@ -368,23 +357,60 @@ footer {
 }
 
 .footer-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
+    max-width: 600px; /* evita desorden en mobile */
+    margin: auto;
 }
 
-/* ANIMACIONES */
-.card,
-.mini-card,
-.role-box {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.8s ease forwards;
+/* ===================== RESPONSIVE ===================== */
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 9rem 1rem 5rem;
+    }
 }
 
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+/* MOBILE */
+@media (max-width: 768px) {
+
+    /* NAV se simplifica */
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .card {
+        padding: 2rem;
+    }
+
+    /* AREAS -> grid limpio */
+    .av-roles {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
+
+    .role-box {
+        width: 100%;
+    }
+
+    /* FORM más cómodo */
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-main {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    /* FOOTER legible */
+    .footer-info p {
+        font-size: 0.9rem;
+        line-height: 1.6;
     }
 }
